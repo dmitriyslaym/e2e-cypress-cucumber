@@ -3,9 +3,8 @@ Feature: BDD Test
   Background:
     Given authorised admin API session
     And following calendars
-      | Name        | TimeZone | MarketOpen | MarketClose | TradingDays | Holidays |
-      #      | <calendar1> | +01:00   |            |             | Monday, Tuesday, Wednesday, Thursday, Friday |          |
-      | <calendar1> | +01:00   |            |             |             |          |
+      | Name        | TimeZone | MarketOpen | MarketClose | TradingDays                                  | Holidays |
+      | <calendar1> | +01:00   |            |             | Monday, Tuesday, Wednesday, Thursday, Friday |          |
     And following MPs
       | Name  |
       | <mp1> |
