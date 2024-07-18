@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "test:bdd:dev": "cypress open -C cypress.cucumber.config.js"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.1",
+    "@lensesio/cypress-websocket-testing": "^1.0.1",
+    "crypto-js": "^4.2.0",
+    "cypress": "^13.13.1",
+    "rxjs": "^7.8.1"
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "Trading GW": {
+    "provider": "websocket",
+    "methods": [
+      {
+        "payload": {
+          "sample": {
+            "d": {
+              "apiKey": "",
+              "signature": "",
+              "timestamp": ""
+            },
+            "q": "exchange.market/createSession",
+            "sid": 1
+          },
+          "metadata": {
+            "q": {
+              "hidden": true,
+              "valueType": "text",
+              "id": "q",
+              "label": "q",
+              "type": "input",
+              "initialValue": "exchange.market/createSession",
+              "required": true
+            },
+            "secret": {
+              "id": "secret",
+              "label": "secret",
+              "type": "input",
+              "initialValue": "8e46b743e9cfa5c3ec1dfdfec2efe14b04d8f72dc574ea50582edf8ce5dbe792",
+              "required": true,
+              "valueType": "text"
+            },
+            "apiKey": {
+              "id": "apiKey",
+              "label": "apiKey",
+              "type": "input",
+              "initialValue": "a31a75f4-0bf7-4264-8842-473fb77f7bca",
+              "required": true,
+              "valueType": "text"
+            },
+            "signature": {
+              "id": "signature",
+              "label": "signature",
+              "hidden": true,
+              "type": "input",
+              "initialValue": "__SIGNATURE__",
+              "valueType": "text"
+            },
+            "sid": {
+              "id": "sid",
+              "label": "sid",
+              "type": "input",
+              "initialValue": 1,
+              "required": true,
+              "valueType": "number"
+            },
+            "timestamp": {
+              "id": "timestamp",
+              "label": "timestamp",
+              "type": "input",
+              "initialValue": "__TIMESTAMP__",
+              "required": true,
+              "valueType": "number"
+            }
+          },
+          "structure": {
+            "d": [
+              "apiKey",
+              "timestamp",
+              "signature"
+            ],
+            "q": "q",
+            "sid": "sid"
+          }
+        },
+        "methodName": "createSession",
+        "group": "Authentication API"
+      },
+      {
+        "payload": {
+          "sample": {
+            "d": {
+              "orderType": "Limit",
+              "side": "Buy",
+              "quantity": 1.3,
+              "price": 100.33,
+              "instrument": "INS1",
+              "mpOrderId": 1001,
+              "timeInForce": "GTC",
+              "userId": "UATUserTest10"
+            },
+            "q": "v1/exchange.market/placeOrder",
+            "sid": 1
+          },
+          "metadata": {
+            "expiryDate": {
+              "hidden": true,
+              "dependency": {
+                "override": {
+                  "hidden": false,
+                  "omitted": false,
+                  "required": true
+                },
+                "operator": "oneOf",
+                "values": [
+                  "GTD"
+                ],
+                "fieldId": "timeInForce"
+              },
+              "valueType": "number",
+              "omitted": true,
+              "id": "expiryDate",
+              "label": "expiryDate",
+              "type": "input",
+              "initialValue": "__TIMESTAMP_SEC__",
+              "required": false
+            },
+            "q": {
+              "hidden": true,
+              "readonly": true,
+              "valueType": "text",
+              "id": "q",
+              "label": "q",
+              "type": "input",
+              "initialValue": "v1/exchange.market/placeOrder",
+              "required": true
+            },
+            "orderType": {
+              "id": "orderType",
+              "label": "orderType",
+              "data": [
+                "Market",
+                "Limit"
+              ],
+              "type": "select",
+              "initialValue": "Limit",
+              "required": true
+            },
+            "side": {
+              "id": "side",
+              "label": "side",
+              "data": [
+                "Buy",
+                "Sell"
+              ],
+              "type": "select",
+              "initialValue": "Buy",
+              "required": true
+            },
+            "quantity": {
+              "id": "quantity",
+              "label": "quantity",
+              "type": "input",
+              "initialValue": 1.25,
+              "required": true,
+              "valueType": "number"
+            },
+            "price": {
+              "hidden": true,
+              "dependency": {
+                "override": {
+                  "hidden": false,
+                  "omitted": false,
+                  "required": true
+                },
+                "operator": "oneOf",
+                "values": [
+                  "Limit"
+                ],
+                "fieldId": "orderType"
+              },
+              "valueType": "number",
+              "omitted": true,
+              "id": "price",
+              "label": "price",
+              "type": "input",
+              "initialValue": 100.5,
+              "required": false
+            },
+            "instrument": {
+              "id": "instrument",
+              "label": "instrument",
+              "data": [
+                "INS1",
+                "INS2",
+                "INS3"
+              ],
+              "type": "select",
+              "required": true
+            },
+            "timeInForce": {
+              "id": "timeInForce",
+              "label": "timeInForce",
+              "data": [
+                "GTC",
+                "GTD",
+                "IOC",
+                "FOK"
+              ],
+              "type": "select",
+              "initialValue": "GTC",
+              "required": true
+            },
+            "userId": {
+              "id": "userId",
+              "label": "userId",
+              "type": "input",
+              "initialValue": "UATUserTest1",
+              "required": true,
+              "valueType": "text"
+            },
+            "mprderId": {
+              "id": "mpOrderId",
+              "label": "mpOrderId",
+              "type": "input",
+              "initialValue": "__TIMESTAMP__",
+              "required": true,
+              "valueType": "number"
+            },
+            "sid": {
+              "id": "sid",
+              "label": "sid",
+              "type": "input",
+              "initialValue": 1,
+              "required": true,
+              "valueType": "number"
+            }
+          },
+          "structure": {
+            "d": [
+              "orderType",
+              "instrument",
+              "side",
+              "quantity",
+              "price",
+              "timeInForce",
+              "expiryDate",
+              "mpOrderId",
+              "userId"
+            ],
+            "q": "q",
+            "sid": "sid"
+          }
+        },
+        "methodName": "placeOrder",
+        "group": "Trading API"
+      },
+      {
+        "payload": {
+          "sample": {
+            "d": {
+              "trackingNumber": 0
+            },
+            "q": "v1/exchange.market/executionReports",
+            "sid": 103
+          }
+        },
+        "methodName": "executionReports",
+        "group": "Private Data API"
+      },
+      {
+        "group": "Private Data API",
+        "methodName": "trades",
+        "payload": {
+          "sample": {
+            "d": {
+              "trackingNumber": 0
+            },
+            "q": "v1/exchange.market/trades",
+            "sid": 104
+          }
+        }
+      }
+    ],
+    "url": "wss://exchange-gateway-master.rnd.exberry-rnd.io",
+    "order": 1
+  }
+}
