@@ -34,7 +34,7 @@ In **mpId** value in URL (instead of _2087505413_ from the docs) use the **id** 
 ## Exchange GW (Trading) part
 WS GW is available with the following DNS:
 
-**wss://sandbox-shared.staging.exberry-uat.io**
+**wss://exchange-gateway-master.rnd.exberry-rnd.io**
 
 You can use Sandbox application with the list of methods that you will need in this scenario - there you can send requests and see all the responses.
 https://sandbox.exberry.io/?url=https://raw.githubusercontent.com/dmitriyslaym/cypress-cucumber-template/main/exchange-gw-sandbox-data.json
