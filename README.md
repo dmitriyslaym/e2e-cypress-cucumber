@@ -37,7 +37,7 @@ WS GW is available with the following DNS:
 **wss://exchange-gateway-master.rnd.exberry-rnd.io**
 
 You can use Sandbox application with the list of methods that you will need in this scenario - there you can send requests and see all the responses.
-https://sandbox.exberry.io/?url=https://github.com/dmitriyslaym/e2e-cypress-cucumber/blob/main/exchange-gw-sandbox-data.json
+https://sandbox.exberry.io/?url=https://raw.githubusercontent.com/dmitriyslaym/e2e-cypress-cucumber/main/exchange-gw-sandbox-data.json
 
 ### Create session
 Take apiKey and secret values from the APIKey, that you generated for MP before.
