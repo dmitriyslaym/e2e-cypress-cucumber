@@ -15,7 +15,7 @@ Credentials:
   "password": "Test1234"
 }
 ```
-Use Get Token route (https://documenter.getpostman.com/view/6229811/TzCV3jcq#9e78837d-11af-4f2e-8e11-35275b86acc1) (!!!! Note that the documentation has a different origin, but in your test you should use "https://admin-api-master.rnd.exberry-rnd.io") and then include the received JWT token in the "Authorization" header of each request to a protected route (make sure that the value of this header always starts with "Bearer " and then the token).
+Use Get Token route (https://documenter.getpostman.com/view/6229811/TzCV3jcq#9e78837d-11af-4f2e-8e11-35275b86acc1) (!!!! Note that the documentation has a different origin, but in your test you should use https://admin-api-master.rnd.exberry-rnd.io) and then include the received JWT token in the "Authorization" header of each request to a protected route (make sure that the value of this header always starts with "Bearer " and then the token).
 
 ### Create Calendar
 Use Create Calendar protected route (https://documenter.getpostman.com/view/6229811/TzCV3jcq#6f1b40e0-f805-4898-af1a-ecb06dd83f0c).
