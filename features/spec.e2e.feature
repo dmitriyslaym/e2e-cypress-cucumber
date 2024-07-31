@@ -8,6 +8,7 @@ Feature: BDD Test
     And following MPs
       | Name  |
       | <mp1> |
+    #  <calendar1Id> is an id of a <calendar1> that was created above
     And following instruments
       | symbol  | Description | Calendar Id   | Activity Status | Quote Currency | Price Precision | Quantity Precision | Min Quantity | Max Quantity |
       | <inst1> | Instrument  | <calendar1Id> | Active          | USD            | 6               | 2                  | 1            | 100000       |
